@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +17,7 @@
   justify-content: center;
 }
 * .title h1 span {
-  color: palevioletred;
+  color: #f1356d;
   margin-left: 15px;
   font-family: andika;
   font-style: italic;
@@ -73,9 +74,13 @@ header svg path {
 }
 header .logo {
   color: var(--secondary-color);
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.7rem;
   padding: 8px 16px;
+  font-family: poppins;
+}
+header .logo .angle-bracket {
+  color: #f1356d;
 }
 header #icon {
   width: 20px;
@@ -269,7 +274,7 @@ nav .close path {
 .projects .projects-container .projects-box .projects-about p {
   color: var(--secondary-color);
   font-size: 1rem;
-  height: 150px;
+  height: 120px;
 }
 .projects .projects-container .projects-box .projects-about .languages-box {
   display: flex;
