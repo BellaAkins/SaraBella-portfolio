@@ -62,7 +62,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 5px;
 }
 header svg {
   width: 36.8px;
@@ -75,8 +75,8 @@ header svg path {
 header .logo {
   color: var(--secondary-color);
   font-weight: 600;
-  font-size: 1.7rem;
-  padding: 8px 16px;
+  font-size: 1.3rem;
+  padding: 2px;
   font-family: poppins;
 }
 header .logo .angle-bracket {
@@ -409,6 +409,9 @@ nav .close path {
   .menu,
   .close {
     display: none;
+  }
+  header .logo {
+    font-size: 1.5rem;
   }
   nav {
     transform: translateX(0);
