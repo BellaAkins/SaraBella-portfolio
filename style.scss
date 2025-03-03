@@ -83,7 +83,6 @@ header {
   .logo {
     color: var(--secondary-color);
     font-weight: 600;
-    font-size: 1.3rem;
     padding: 2px;
     font-family: poppins;
 
@@ -112,7 +111,7 @@ nav {
   right: 0;
   top: 0;
   background: var(--secondary-color);
-  width: 50%;
+  width: 100%;
   height: 100vh;
   transform: translateX(100%);
   transition: transform 0.5s ease in out;
@@ -124,6 +123,7 @@ nav {
     display: block;
     font-weight: 500;
     font-size: 1.2rem;
+    text-align: center;
   }
 
   ul {
@@ -188,6 +188,28 @@ nav {
       line-height: 30px;
       // margin-top: 18px;
       // width: 312px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+
+      a {
+        padding: 10px 20px;
+        border-radius: 10px;
+        background: palevioletred;
+        background: #f1356d;
+        color: var(--primary-color);
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      a:hover {
+        background: #f1356d;
+        background: palevioletred;
+      }
     }
   }
 }
@@ -352,102 +374,98 @@ nav {
     }
   }
 }
-
-//Contact
 .contact {
-  //  background: var(--secondary-color);
-  margin-top: 70px;
-  .contact-container {
-    //background: green;
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-    flex-wrap: wrap;
+  margin-top: 60px;
+  .contact-title {
+    text-align: center;
 
-    .logo-card {
-      // width: 400px;
+    h1 {
+      font-size: 2.7rem;
+      font-weight: 500;
+      line-height: 45.6px;
+      letter-spacing: -0.38px;
+
+      span {
+        color: #f1356d;
+        font-weight: 700;
+      }
+    }
+
+    p {
+      margin: 0 auto;
+      font-size: 1.2rem;
+    }
+  }
+
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
+    h2 {
+      font-size: 1.5rem;
+      color: #f1356d;
+      font-family: andika;
+    }
+
+    .contact-form {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 35px;
-      border: 2px solid palevioletred;
+      gap: 20px;
+      margin-top: 40px;
+      border: 1px solid var(--secondary-color);
+      border-radius: 7%;
+      padding: 20px;
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        padding: 10px;
+        border: 1px solid var(--secondary-color);
+        border-radius: 5px;
+        width: 100%;
+      }
+
+      input[type="submit"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #f1356d;
+        color: var(--primary-color);
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background: #f1356d;
+        background: palevioletred;
+      }
+    }
+
+    .connect-title {
+      margin-top: 40px;
+      border: 1px solid var(--secondary-color);
       border-radius: 20%;
-      padding: 15px 30px;
-      margin: 0 auto;
-      margin-bottom: 80px;
-      animation: Bellaintroload 3s forwards;
-      .logo {
-        color: var(--secondary-color);
-        font-weight: bold;
-        font-size: 3rem;
-        padding: 8px 16px;
-      }
+      padding: 20px;
+      text-align: center;
 
-      .details {
+      .connect-card {
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
         justify-content: center;
-        h2 {
-          color: palevioletred;
-          font-size: 0.9rem;
-        }
-      }
-
-      .icons {
-        display: flex;
-        gap: 15px;
-
+        gap: 10px;
         img {
           width: 30px;
-          border-radius: 50%;
         }
       }
     }
 
-    .contact-card {
-      margin: 0 auto;
-      padding: 40px;
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px 15px;
-      }
-
-      input,
-      textarea {
-        width: 100%;
-        padding: 10px;
-        //  border: 2px solid var(--primary-color);
-
-        &::placeholder {
-          padding: 3px;
-          font-size: 0.8rem;
-        }
-      }
-
-      input[type="submit"] {
-        display: block;
-        border-radius: 10px;
-        padding: 20px;
-        margin: 0 auto;
-        min-width: 300px;
-        width: 50%;
-        font-size: 1rem;
-        background: palevioletred;
-        border: none;
-        color: #f2f2f2;
-        cursor: pointer;
-        margin-top: 10px;
-      }
-
-      input[type="submit"]:hover {
-        font-size: 1.1rem;
-      }
+    .opporturnities {
+      margin-top: 40px;
+      border: 1px solid var(--secondary-color);
+      border-radius: 20%;
+      padding: 20px;
+      text-align: center;
     }
   }
 }
@@ -565,28 +583,54 @@ nav {
     }
   }
   .contact {
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+      background: none;
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        padding: 10px;
+        border: 1px solid var(--secondary-color);
+        border-radius: 5px;
+        width: 100%;
+      }
+
+      input[type="submit"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #f1356d;
+        color: var(--primary-color);
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background: #f1356d;
+        background: palevioletred;
+      }
+    }
+
     .contact-container {
-      .logo-card {
-        padding: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
 
-        border-radius: 50%;
-
-        .logo {
-          font-size: 4rem;
-        }
-
-        .details {
-          h2 {
-            font-size: 1.4rem;
-          }
-        }
+      .connect-title {
       }
 
-      .contact-card {
-        input[type="submit"] {
-          padding: 10px;
-        }
+      .opporturnities {
       }
+    }
+
+    img {
+      width: 20px;
     }
   }
 }
@@ -600,3 +644,4 @@ nav {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 }
+/* filepath: /Users/user/Documents/Portfolio/Bella-Portfolio/style.scss */
