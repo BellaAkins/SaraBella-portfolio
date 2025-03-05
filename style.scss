@@ -16,6 +16,7 @@
     h1 {
       font-size: 3.5rem;
       display: flex;
+      padding: 10px;
       align-items: center;
       justify-content: center;
 
@@ -507,19 +508,25 @@ nav {
     width: auto;
     height: auto;
     background: none;
+    background: var(--secondary-color);
+    border-radius: 25px;
 
     ul {
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
 
+      padding: 5px;
+
       a {
         color: var(--secondary-color);
+        color: var(--primary-color);
         padding: 8px 16px;
         font-size: 1.3rem;
 
         &:hover {
           color: var(--secondary-color);
+          color: #f1356d;
         }
 
         &::after {
@@ -545,8 +552,10 @@ nav {
   .hero {
     .hero-image {
       width: 500px;
+
       img {
         width: 100%;
+        margin-top: 50px;
       }
     }
     .hero-text {
