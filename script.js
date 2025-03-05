@@ -17,3 +17,16 @@ icon.onclick = function () {
     icon.src = "images/moon-icon.svg";
   }
 };
+
+//To close the navbar when a link is clicked
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.getElementById("navbar");
+  const navLinks = navbar.querySelectorAll("a");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navbar.style.transform = "translateX(100%)";
+    });
+  });
+});
