@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      navbar.style.transform = "translateX(100%)";
+       nav.classList.remove("open-nav");
     });
   });
 });
