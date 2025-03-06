@@ -48,6 +48,11 @@ li {
   list-style: none;
 }
 
+.tech-logo {
+  // display: flex;
+  width: 20px;
+}
+
 :root {
   --primary-color: #ffffff;
   --secondary-color: #212121;
@@ -481,7 +486,6 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    // background: purple;
   }
 
   .about {
