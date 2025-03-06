@@ -43,6 +43,10 @@ li {
   list-style: none;
 }
 
+.tech-logo {
+  width: 20px;
+}
+
 :root {
   --primary-color: #ffffff;
   --secondary-color: #212121;
