@@ -26,7 +26,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-       nav.classList.remove("open-nav");
+      //  navbar.style.transform = "translateX(100%)";
+      nav.classList.remove("open-nav");
     });
   });
+});
+
+//To make contact form work
+const form = document.querySelector("form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const formData = new FormData(form);
+  fetch(form.action, {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => {
+      if (response.ok) {
+        alert("Message sent successfully!");
+        form.reset();
+      } else {
+        alert("There was a problem sending your message.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("There was a problem sending your message.");
+    });
+});
+
+//scrolling
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // Add the visible class when in view
+        } else {
+          entry.target.classList.remove("visible"); // Remove the visible class when out of view
+        }
+      });
+    },
+    { threshold: 0.1 } // Trigger when 10% of the section is visible
+  );
+
+  sections.forEach((section) => observer.observe(section));
 });
