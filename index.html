@@ -51,8 +51,9 @@
         </svg>
         <!-- <img class="menu" src="images/menu-black.svg" alt="menu" />-->
       </header>
+
       <!--Hero-->
-      <section class="hero">
+      <section class="hero fade-in" id="home">
         <div class="hero-text">
           <h1>
             Hiiii <br />
@@ -75,28 +76,9 @@
           <img src="images/Bella bw.jpeg" alt="SaraBella" />
         </div>
       </section>
-      <!--About-->
-      <!--<section class="about" id="about">
-        <div class="about-text-container">
-          <div class="title">
-            <h1>About <span>Me</span></h1>
-          </div>
-          <div class="about-text">
-            <p>
-              I am Sarah Toluwalope Akinwande, I studied Biochemistry at Federal
-              University Oye-Ekiti. I enjoy building responsive, user-friendly,
-              and high-quality web applications. I'm excited to collaborate and
-              bring innovative ideas to life!
-            </p>
-          </div>
-        </div>
-        <div class="about-image">
-         
-          <img src="images/Bella.jpg" class="main-img" alt="Bella" />
-        </div>
-      </section>-->
+
       <!--Skills-->
-      <section class="skills" id="skills">
+      <section class="skills fade-in" id="skills">
         <div class="title">
           <h1>My <span>Skills</span></h1>
         </div>
@@ -137,7 +119,7 @@
         </div>
       </section>
       <!--Projects-->
-      <section class="projects" id="projects">
+      <section class="projects fade-in" id="projects">
         <div class="title">
           <h1><span>Projects</span></h1>
         </div>
@@ -725,11 +707,14 @@
           </div>
           <div class="projects-box">
             <div class="projects-image">
-              <img src="images/adoptdog.PNG" alt="bellabodylab screenshot" />
+              <img
+                src="images/eventeaze-screenshot.jpg"
+                alt="eventeaze screenshot"
+              />
             </div>
             <div class="projects-details">
-              <h1>Adopt Me</h1>
-              <a target="_blank" href="https://adopt-dog.vercel.app/">
+              <h1>EventEaze</h1>
+              <a target="_blank" href="https://eventeaze.vercel.app/">
                 <svg
                   fill="#000000"
                   viewBox="0 0 64 64"
@@ -826,20 +811,22 @@
             </div>
             <div class="projects-about">
               <p>
-                This Project Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Facilis impedit blanditiis labore.
+                Eventeaze is an event management application designed to help
+                users plan, organize, and manage events efficiently. The app
+                features a user-friendly interface, streamlined workflow, and
+                essential tools for a hassle-free event experience.
               </p>
             </div>
             <div class="languages-box">
               <p class="language">HTML</p>
-              <p class="language">SCSS</p>
+              <p class="language">CSS</p>
               <p class="language">Javascript</p>
             </div>
           </div>
         </div>
       </section>
       <!--Contact-->
-      <section class="contact" id="contact">
+      <section class="contact fade-in" id="contact">
         <div class="contact-title">
           <h1>Get in <span>Touch</span></h1>
           <p>
@@ -849,7 +836,11 @@
         </div>
 
         <div class="contact-container">
-          <div class="contact-form">
+          <form
+            action="https://getform.io/f/anlxymka"
+            method="POST"
+            class="contact-form"
+          >
             <label for="name">Name</label>
             <input
               type="text"
@@ -874,46 +865,99 @@
               required
             ></textarea>
             <input type="submit" value="Send Message" />
-          </div>
+          </form>
 
           <div class="connect">
             <div class="connect-title">
               <h2>Connect with me</h2>
-              <p>Email: sarabellaakins@gmail.com</p>
+              <p>
+                Email:
+                <a class="mail" href="mailto:sarabellaakins@gmail.com"
+                  >sarabellaakins@gmail.com</a
+                >
+              </p>
               <div class="connect-card">
-                <a href="https://x.com/AkinwandeSarah"
-                  ><img src="images/x-logo.avif" alt="x-icon"
-                /></a>
-                <a href="https://www.instagram.com/sarabella_akinwande/"
-                  ><img src="images/instagram.svg" alt="instagram"
-                /></a>
-                <a href="https://github.com/BellaAkins"
-                  ><img src="images/github.svg" alt="github"
-                /></a>
                 <a href="https://www.linkedin.com/in/sarah-akinwande"
                   ><img src="images/linkedin.svg" alt="linkedin"
                 /></a>
+                <a href="https://x.com/AkinwandeSarah"
+                  ><img src="images/xlogo.png" alt="x-icon"
+                /></a>
+
+                <a href="https://github.com/BellaAkins"
+                  ><img src="images/github.svg" alt="github"
+                /></a>
+
                 <a href="https://wa.link/3i8x3p"
                   ><img src="images/whatsapp.svg" alt="whatsapp"
+                /></a>
+
+                <a href="https://www.instagram.com/sarabella_akinwande/"
+                  ><img src="images/instagram.svg" alt="instagram"
                 /></a>
               </div>
             </div>
             <div class="opporturnities">
-              <h2>Looking For Opportunities</h2>
+              <h2>Let's Bring Your Vision to Life!</h2>
               <p>
-                I'm currently available for freelance projects, full-time
-                positions, and interesting collaborations.Feel free to reach out
-                to discuss potential opportunities. I am eager to take on new
-                challenges and deliver high-quality results. Let's connect and
-                explore how we can work together to bring your ideas to life.
+                I'm ready to take on new challenges and bring your vision to
+                life! Whether it's a freelance project, full-time role, or
+                innovative collaboration, I'm eager to explore exciting
+                opportunities and deliver top-notch results.
               </p>
             </div>
           </div>
         </div>
       </section>
     </div>
-    <footer>
-      <div class="footer-links"></div>
+    <hr />
+    <footer class="fade-in">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="logo">
+            <a href="#" class="logo"
+              ><span class="angle-bracket">&lt;</span>Bella.dev
+              <span class="angle-bracket">/&gt;</span></a
+            >
+          </div>
+
+          <div class="motto">Code Create Deliver.</div>
+        </div>
+
+        <div class="footer-below">
+          <div class="footer-logos">
+            <a href="https://www.linkedin.com/in/sarah-akinwande"
+              ><img src="images/linkedin.svg" alt="linkedin"
+            /></a>
+            <a href="https://x.com/AkinwandeSarah"
+              ><img src="images/xlogo.png" alt="x-icon"
+            /></a>
+
+            <a href="https://github.com/BellaAkins"
+              ><img src="images/github.svg" alt="github"
+            /></a>
+
+            <a href="https://wa.link/3i8x3p"
+              ><img src="images/whatsapp.svg" alt="whatsapp"
+            /></a>
+
+            <a href="https://www.instagram.com/sarabella_akinwande/"
+              ><img src="images/instagram.svg" alt="instagram"
+            /></a>
+          </div>
+
+          <div class="footer-links">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">&copy; 2025 Bella.dev. All rights reserved.</div>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>
