@@ -57,13 +57,27 @@ li {
   --secondary-color: #fff;
 }
 
+.logo {
+  color: var(--secondary-color);
+  font-weight: 600;
+  padding: 2px;
+  font-family: poppins;
+  font-size: 1.4rem;
+}
+.logo .angle-bracket {
+  color: #f1356d;
+}
+
 .open-nav {
   transform: translateX(0%);
 }
 
 body {
-  margin: 16px;
   background: var(--primary-color);
+}
+
+.container {
+  margin: 16px;
 }
 
 header {
@@ -85,6 +99,8 @@ header .logo {
   padding: 2px;
   font-family: poppins;
   font-size: 1.4rem;
+  display: flex;
+  vertical-align: middle;
 }
 header .logo .angle-bracket {
   color: #f1356d;
@@ -178,6 +194,8 @@ nav .close path {
 }
 .hero .hero-text .hero-cta {
   display: flex;
+  flex-direction: column;
+  text-align: center;
   gap: 20px;
   margin-top: 20px;
 }
@@ -191,36 +209,7 @@ nav .close path {
   cursor: pointer;
 }
 .hero .hero-text .hero-cta a:hover {
-  font-size: 1.2rem;
-}
-
-.about {
-  display: flex;
-  justify-content: space-between;
-  gap: 70px;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 60px;
-}
-.about .about-image {
-  width: 400px;
-}
-.about .about-image img {
-  width: 100%;
-  border-radius: 50%;
-  animation: Bellaintroload 3s forwards;
-}
-.about .about-text-container {
-  width: 600px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.about .about-text-container .about-text p {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 30px;
-  letter-spacing: -0.38px;
+  opacity: 0.85;
 }
 
 .skills {
@@ -374,6 +363,14 @@ nav .close path {
   border-radius: 5px;
   width: 100%;
 }
+.contact .contact-container .contact-form input[type=text]:focus,
+.contact .contact-container .contact-form input[type=email]:focus,
+.contact .contact-container .contact-form textarea:focus {
+  outline: none; /* Removes the default blue outline */
+  border-color: #f1356d;
+  caret-color: #f1356d;
+  box-shadow: 0 0 5px #f1356d;
+}
 .contact .contact-container .contact-form input[type=submit] {
   padding: 10px;
   border: none;
@@ -386,7 +383,7 @@ nav .close path {
 }
 .contact .contact-container .contact-form input[type=submit]:hover {
   background: #f1356d;
-  background: palevioletred;
+  opacity: 0.75;
 }
 .contact .contact-container .connect-title {
   margin-top: 40px;
@@ -394,14 +391,22 @@ nav .close path {
   border-radius: 20%;
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact .contact-container .connect-title a {
+  text-decoration: underline;
+  color: #f1356d;
 }
 .contact .contact-container .connect-title .connect-card {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 .contact .contact-container .connect-title .connect-card img {
-  width: 30px;
+  width: 20px;
+  cursor: pointer;
 }
 .contact .contact-container .opporturnities {
   margin-top: 40px;
@@ -411,18 +416,61 @@ nav .close path {
   text-align: center;
 }
 
+footer {
+  width: 100%;
+  width: 100%;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+  padding: 20px 0; /* Adjust padding for spacing */
+  color: var(--secondary-color); /* Ensures text is readable */
+  background: transparent;
+}
+footer img {
+  width: 20px;
+}
+footer .footer-container .footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .footer-container a {
+  font-size: 1rem;
+}
+footer .footer-container a:hover {
+  color: #f1356d;
+}
+footer .footer-container .footer-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+footer .footer-container .footer-links ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+footer .footer-container .copyright {
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  color: #f1356d;
+  font-weight: 700;
+}
+
 @media only screen and (min-width: 680px) {
-  body {
+  .container {
     margin: 24px 80px;
   }
-  .hero,
-  .about {
+  .hero {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  .about {
-    flex-direction: row-reverse;
+  .hero .hero-text .hero-cta {
+    display: flex;
+    flex-direction: row;
   }
 }
 @media only screen and (min-width: 920px) {
@@ -554,4 +602,67 @@ nav .close path {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 }
-/* filepath: /Users/user/Documents/Portfolio/Bella-Portfolio/style.scss *//*# sourceMappingURL=style.css.map */
+/* filepath: /Users/user/Documents/Portfolio/Bella-Portfolio/style.scss */
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.hero-text {
+  animation: slide-in 1s ease-in-out;
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+logo {
+  animation: zoom-in 0.8s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Reset position */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.opporturnities {
+  animation: bounce 1.5s infinite;
+}/*# sourceMappingURL=style.css.map */
